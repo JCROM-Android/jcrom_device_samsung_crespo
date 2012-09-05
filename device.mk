@@ -43,6 +43,14 @@ PRODUCT_COPY_FILES += \
         device/samsung/crespo/gps.xml:system/vendor/etc/gps.xml \
         device/samsung/crespo/gps.conf:system/etc/gps.conf
 
+PRODUCT_PACKAGES += \
+	jctool \
+    bootsound \
+    stagefright
+
+PRODUCT_COPY_FILES += \
+	device/samsung/crespo/bootanimation.zip:system/media/bootanimation.zip
+
 $(call inherit-product, device/samsung/crespo/device_base.mk)
 
 # See comment at the top of this file. This is where the other
