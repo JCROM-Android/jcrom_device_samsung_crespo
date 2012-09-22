@@ -58,4 +58,5 @@ $(call inherit-product, device/samsung/crespo/device_base.mk)
 # of the aspects that require proprietary drivers that aren't
 # commonly available
 $(call inherit-product-if-exists, vendor/samsung/crespo/device-vendor.mk)
+$(call inherit-product-if-exists, jcrom/common/common.mk)
 
