@@ -43,6 +43,14 @@ PRODUCT_COPY_FILES += \
         device/samsung/crespo/gps.xml:system/vendor/etc/gps.xml \
         device/samsung/crespo/gps.conf:system/etc/gps.conf
 
+PRODUCT_PACKAGES += \
+	jctool \
+    bootsound \
+    stagefright
+
+PRODUCT_COPY_FILES += \
+	device/samsung/crespo/bootanimation.zip:system/media/bootanimation.zip
+
 $(call inherit-product, device/samsung/crespo/device_base.mk)
 
 # See comment at the top of this file. This is where the other
@@ -50,4 +58,5 @@ $(call inherit-product, device/samsung/crespo/device_base.mk)
 # of the aspects that require proprietary drivers that aren't
 # commonly available
 $(call inherit-product-if-exists, vendor/samsung/crespo/device-vendor.mk)
+$(call inherit-product-if-exists, jcrom/common/common.mk)
 

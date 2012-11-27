@@ -19,6 +19,9 @@
 # product configuration (apps).
 #
 
+#JCROM
+$(call inherit-product-if-exists, jcrom/samsung/crespo/device-common.mk)
+
 # Get the long list of APNs
 PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
@@ -35,8 +38,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, device/samsung/crespo/device.mk)
 
+#JCROM
+$(call inherit-product-if-exists, jcrom/samsung/crespo/device-crespo.mk)
+
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=soju BUILD_FINGERPRINT="google/soju/crespo:4.1.2/JZO54K/485486:user/release-keys" PRIVATE_BUILD_DESC="soju-user 4.1.2 JZO54K 485486 release-keys"
+
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_crespo
 PRODUCT_DEVICE := crespo
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := Full Android on Crespo
+PRODUCT_BRAND := Google
+PRODUCT_MODEL := Nexus S
+PRODUCT_MANUFACTURER := Samsung
+

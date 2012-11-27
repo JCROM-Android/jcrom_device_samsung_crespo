@@ -108,10 +108,10 @@
     <integer name="config_defaultNotificationLedOff">9000</integer>
 
     <!-- Package name providing network location support. -->
-    <string name="config_networkLocationProviderPackageName" translatable="false">com.google.android.location</string>
+    <add-resource type="string" name="config_networkLocationProviderPackageName" translatable="false">com.google.android.location</add-resource>
 
     <!-- Package name providing geocoder API support. -->
-    <string name="config_geocodeProviderPackageName" translatable="false">com.google.android.location</string>
+    <add-resource type="string" name="config_geocodeProviderPackageName" translatable="false">com.google.android.location</add-resource>
 
     <!-- XXXXX NOTE THE FOLLOWING RESOURCES USE THE WRONG NAMING CONVENTION.
          Please don't copy them, copy anything else. -->
