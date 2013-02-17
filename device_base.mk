@@ -206,6 +206,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mass_storage
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	ro.adb.secure=1
+
 include frameworks/native/build/phone-hdpi-512-dalvik-heap.mk
 
 # we have enough storage space to hold precise GC data
